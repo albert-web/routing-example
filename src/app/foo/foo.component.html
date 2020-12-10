@@ -1,0 +1,12 @@
+<h1>
+    Foo Component
+</h1>
+
+<h2>
+    {{ sharedDataSvc.sharedString }}
+</h2>
+<button
+    (click)="sharedDataSvc.sharedDataString = 'Updated from Foo'"
+>
+    update Shared String
+</button>
