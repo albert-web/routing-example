@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {SharedDataService} from '../shared-data.Service';
 @Component({
   selector: 'app-bar',
   templateUrl: './bar.component.html',
@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private sharedDataSvc: SharedDataService) { }
 
   ngOnInit(): void {
+    console.log(this.sharedDataSvc.sharedString);
   }
 
 }
